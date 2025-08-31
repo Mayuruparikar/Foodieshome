@@ -1,0 +1,49 @@
+input{
+  width: 20rem;
+  background-color: rgb(200, 196, 196);
+
+  color: azure;
+}
+input:focus{
+  outline:none;
+}
+ .hover_effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 310px;
+  overflow: hidden;
+  transition: 0.7s ease;
+  margin: 10px;
+}
+.header-bar {
+  background: linear-gradient(90deg, #ff6347, #ff9800);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height: 80px;       /* fixed header height */
+  overflow: hidden;   /* ✅ keeps logo inside */
+}
+
+.header-logo {
+  height: 100%;       /* ✅ logo will never exceed header */
+  width: auto;        /* keeps proportions */
+  max-width: 100%;    /* ✅ prevents stretching outside */
+  object-fit: contain;
+  filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.8));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header-bar:hover .header-logo {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 1));
+}
